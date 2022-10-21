@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="19dp"
+    app:cardCornerRadius="3dp"
+    android:paddingTop="19dp"
+    android:layout_marginTop="17dp"
+    android:paddingRight="19dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#2C00BCD4"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text=" Product 1 "
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="Product Id"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+        <TextView
+            android:id="@+id/shorshort_desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text=" Product Desc "
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/product_id" />
+
+
+        <TextView
+            android:id="@+id/slug_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text=" Slug  "
+            android:textSize="19sp"
+            app:layout_constraintTop_toBottomOf="@id/shorshort_desc_tv" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text=" Status  "
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/slug_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+   </androidx.cardview.widget.CardView>
