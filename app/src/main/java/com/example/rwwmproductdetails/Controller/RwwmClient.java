@@ -1,6 +1,8 @@
 package com.example.rwwmproductdetails.Controller;
 
 import com.example.rwwmproductdetails.Interfaces.Api;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -12,7 +14,7 @@ public class RwwmClient {
 
     public RwwmClient () {
         retrofit= new Retrofit.Builder().baseUrl(Rwwm_Client_UrlS)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().setLenient().create()))
                 .build();
     }
 
@@ -24,6 +26,7 @@ public class RwwmClient {
     }
 
     public static Api getApi() {
+
         return retrofit.create(Api.class);
     }
 }

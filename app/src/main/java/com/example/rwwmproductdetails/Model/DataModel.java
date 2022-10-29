@@ -8,20 +8,23 @@ public class DataModel {
     private String id;
     @SerializedName("name")
     private String name;
-
-    @SerializedName("slug")
-    private String slug;
+//
+    @SerializedName("image")
+    public image image;
+//    @SerializedName("slug")
+//    private String slug;
     @SerializedName("short_description")
     private String short_description;
-    @SerializedName("status")
-    private String status;
+//    @SerializedName("status")
+//    private String status;
 
-    public DataModel(String id, String name, String slug, String short_description, String status) {
+    public DataModel(String id, String name, String short_description, image image ) {
         this.id = id;
         this.name = name;
-        this.slug = slug;
+//        this.slug = slug;
+        this.image=image;
         this.short_description = short_description;
-        this.status = status;
+//        this.status = status;
     }
 
     public String getId() {
@@ -31,16 +34,16 @@ public class DataModel {
     public String getName() {
         return name;
     }
-
-    public String getSlug() {
-        return slug;
-    }
+//
+//    public String getSlug() {
+//        return slug;
+//    }
 
     public String getShort_description() {
         return short_description;
     }
 
-    public String getStatus() {
-        return status;
-    }
+//    public String getStatus() {
+//        return status;
+//    }
 }
